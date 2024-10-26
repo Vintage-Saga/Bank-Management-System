@@ -32,7 +32,7 @@ To use the bank management system, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone <https://github.com/AbdoHosnie/BankManagementSystem>
+   git clone <https://github.com/Vintage-Saga/Bank-Management-System>
 3. Navigate to the project directory:
       ```bash
       cd BankManagementSystem
