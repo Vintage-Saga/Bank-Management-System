@@ -1,31 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Profile</title>
-    <link rel="stylesheet" href="../resources/styles.css">  <!-- Link to CSS -->
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>User Profile</title>
+   <link rel="stylesheet" href="../resources/styles.css"> <!-- Link to CSS -->
+   <style>
+       /* Add custom styles */
+       body {
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           height: 100vh;
+           margin: 0;
+           background-color: #f8f9fa;
+           font-family: Arial, sans-serif;
+       }
+
+       .container {
+           background: #ffffff;
+           padding: 30px;
+           border-radius: 10px;
+           box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+           max-width: 400px;
+           width: 100%;
+           text-align: center;
+       }
+
+       .container h2 {
+           margin-bottom: 20px;
+           font-size: 24px;
+           color: #333;
+       }
+
+       .form-group {
+           text-align: left;
+           margin-bottom: 15px;
+       }
+
+       .btn {
+           width: 100%;
+           padding: 10px;
+           border: none;
+           border-radius: 5px;
+           font-size: 16px;
+           cursor: pointer;
+       }
+
+       .btn-primary {
+           background-color: #28a745; /* Green */
+           color: white;
+       }
+
+       .btn-primary:hover {
+           background-color: #218838;
+       }
+
+       .invalid-feedback {
+           color: red;
+           font-size: 12px;
+       }
+   </style>
 </head>
 <body>
-    <div class="container">
-        <h2 class="mt-5">User  Profile</h2>
-        <form id="profileForm">
-            <div class="form-group">
-                <label for="profileUsername">Username</label>
-                <input type="text" class="form-control" id="profileUsername" disabled>
-            </div>
-            <div class="form-group">
-                <label for="profileEmail">Email</label>
-                <input type="email" class="form-control" id="profileEmail" disabled>
-            </div>
-            <div class="form-group">
-                <label for="profilePassword">New Password</label>
-                <input type="password" class="form-control" id="profilePassword">
-                <div class="invalid-feedback">Please enter a new password.</div>
-            </div>
-            <button type="submit" class="btn btn-primary">Update Profile</button>
-        </form>
-    </div>
-    <script src="../resources/script.js"></script>  <!-- Link to JavaScript -->
+   <div class="container">
+       <h2>User Profile</h2>
+       <form id="profileForm">
+           <div class="form-group">
+               <label for="profileUsername">Username</label>
+               <input type="text" class="form-control" id="profileUsername" disabled>
+           </div>
+           <div class="form-group">
+               <label for="profileEmail">Email</label>
+               <input type="email" class="form-control" id="profileEmail" disabled>
+           </div>
+           <div class="form-group">
+               <label for="profilePassword">New Password</label>
+               <input type="password" class="form-control" id="profilePassword" required>
+               <div class="invalid-feedback">Please enter a new password.</div>
+           </div>
+           <button type="submit" class="btn btn-primary">Update Profile</button>
+       </form>
+   </div>
+   <script src="../resources/script.js"></script> <!-- Link to JavaScript -->
+   <script>
+       document.getElementById('profileForm').addEventListener('submit', function(event) {
+           event.preventDefault(); // Prevent form submission
+           const passwordField = document.getElementById('profilePassword');
+
+           // Validate new password
+           if (!passwordField.value) {
+               passwordField.classList.add('is-invalid');
+               return;
+           } else {
+               passwordField.classList.remove('is-invalid');
+           }
+
+           // Logic for updating user profile goes here
+           alert('Profile updated successfully!');
+       });
+   </script>
 </body>
 </html>
