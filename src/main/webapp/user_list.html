@@ -3,24 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User List</title>
-    <link rel="stylesheet" href="../resources/styles.css">  <!-- Link to CSS -->
+    <title>Bank Management</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h2 class="mt-5">User  List</h2>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Username</th>
-                    <th>Email</th>
-                </tr>
-            </thead>
-            <tbody id="userList">
-                <!-- User data will be populated here -->
-            </tbody>
-        </table>
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <h1>🅱</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Data View</a></li>
+                </ul>
+            </nav>
+            <div class="operations">
+                <h3>Operations</h3>
+                <ul>
+                    <li><a href="#">Add New</a></li>
+                    <li><a href="#">Update</a></li>
+                    <li><a href="#">Delete</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main>
+            <header>
+                <h2>Banks Management</h2>
+            </header>
+            <section class="form-section">
+                <h3>Fill Bank's Information</h3>
+                <form>
+                    <label>
+                        Bank Number
+                        <input type="text" placeholder="Enter Bank Number">
+                    </label>
+                    <label>
+                        Bank Name
+                        <input type="text" placeholder="Enter Bank Name">
+                    </label>
+                    <label>
+                        DA Account Number
+                        <input type="text" placeholder="Enter DA Account Number">
+                    </label>
+                    <label>
+                        Euro Account Number
+                        <input type="text" placeholder="Enter Euro Account Number">
+                    </label>
+                </form>
+            </section>
+            <section class="table-section">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Bank Number</th>
+                            <th>Name</th>
+                            <th>DA Account Number</th>
+                            <th>Euro Account Number</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Alger Bank</td>
+                            <td>56958963</td>
+                            <td>1236226</td>
+                        </tr>
+                        <tr>
+                            <td>125</td>
+                            <td>Oran Bank</td>
+                            <td>12589637</td>
+                            <td>12559665</td>
+                        </tr>
+                        <tr>
+                            <td>200</td>
+                            <td>Bank</td>
+                            <td>1585955</td>
+                            <td>9511666</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
     </div>
-    <script src="../resources/script.js"></script>  <!-- Link to JavaScript -->
 </body>
 </html>

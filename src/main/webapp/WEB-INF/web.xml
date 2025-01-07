@@ -4,13 +4,38 @@
          http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
 
+    <!-- MasterServlet Configuration -->
     <servlet>
-        <servlet-name>BankManServlet</servlet-name>
-        <servlet-class>com.yourpackage.BankManServlet</servlet-class>
+        <servlet-name>MasterServlet</servlet-name>
+        <servlet-class>servlet.MasterServlet</servlet-class>
     </servlet>
-    
     <servlet-mapping>
-        <servlet-name>BankManServlet</servlet-name>
-        <url-pattern>/bankman</url-pattern>
+        <servlet-name>MasterServlet</servlet-name>
+        <url-pattern>/master</url-pattern>
     </servlet-mapping>
+
+    <!-- RegistrationServlet Configuration -->
+    <servlet>
+        <servlet-name>RegistrationServlet</servlet-name>
+        <servlet-class>servlet.RegistrationServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegistrationServlet</servlet-name>
+        <url-pattern>/register</url-pattern>
+    </servlet-mapping>
+
+    <!-- HomeServlet Configuration -->
+    <servlet>
+        <servlet-name>HomeServlet</servlet-name>
+        <servlet-class>servlet.HomeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HomeServlet</servlet-name>
+        <url-pattern>/home</url-pattern>
+    </servlet-mapping>
+
+    <!-- Welcome File Configuration -->
+    <welcome-file-list>
+        <welcome-file>login.jsp</welcome-file>
+    </welcome-file-list>
 </web-app>
